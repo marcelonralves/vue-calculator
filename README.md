@@ -1,24 +1,29 @@
-# vue-calculator
 
-## Project setup
+# vueJS calculadora
+
+Uma calculadora simples usando vueJS
+
+
+## Funcionalidades
+
+- Somar, subtrair, multiplicar e dividir
+- Usar dois números para realizar o cálculo
+
+## Screenshot
+
+![App Screenshot](https://i.imgur.com/9thyK0W.gif)
+
+## Como usar?
+
+1 Passo: Basta clonar o repositório
+```
+https://github.com/marcelonralves/vue-calculator.git
+```
+2 Passo: Na pasta que você clonou, basta executar esse comnado para instalar as depedências
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+3 Passo: Use o comando abaixo para rodar o servidor localmente
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
