@@ -1,4 +1,7 @@
 <template>
+        <div v-show="result" id="result" class="alert alert-success" role="alert">
+            O resultado é: {{ result }}
+        </div>
         <form id="formAction" class="row gx-3 gy-2 align-items-center" @submit="calc">
                 <div class="col-4">
                     <label for="number1" class="form-label">Número 1:</label>
@@ -22,7 +25,7 @@
                     <button class="btn btn-primary" type="submit">Calcular</button>
                 </div>
         </form>
-            <div id="result">O resultado é: {{ result }}</div>
+            <div id="result"></div>
 
 </template>
 
