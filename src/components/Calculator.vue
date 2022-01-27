@@ -1,18 +1,29 @@
 <template>
-    <form id="formAction" @submit="calc">
-        <label for="number1">Número 1:</label>
-        <input type="number"  v-model="number1" min="0" id="number1"><br>
-        <label for="number2">Número 2:</label>
-        <input type="number" v-model="number2" min="0" id="number2"><br>
-        <select v-model="action" id="action"><br>
-            <option value="sum" selected>Somar</option>
-            <option value="subtract">Subtrair</option>
-            <option value="multiply">Multiplicar</option>
-            <option value="divide">Dividir</option>
-        </select><br>
-        <button type="submit">Calcular</button>
-    </form>
-        <div id="result">{{ result }}</div>
+        <form id="formAction" class="row gx-3 gy-2 align-items-center" @submit="calc">
+                <div class="col-4">
+                    <label for="number1" class="form-label">Número 1:</label>
+                    <input class="form-control" type="number"  v-model="number1" min="0" id="number1">
+                </div>
+                <div class="col-4">
+                    <label for="number2" class="form-label">Número 2:</label>
+                    <input type="number" class="form-control" v-model="number2" min="0" id="number2">
+                </div>
+                <div class="col-4">
+                    <label for="number2" class="form-label">Ação:</label>
+                    <select class="form-select" v-model="action" id="action">
+                        <option selected>Selecione uma opção</option>
+                        <option value="sum" selected>Somar</option>
+                        <option value="subtract">Subtrair</option>
+                        <option value="multiply">Multiplicar</option>
+                        <option value="divide">Dividir</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Calcular</button>
+                </div>
+        </form>
+            <div id="result">O resultado é: {{ result }}</div>
+
 </template>
 
 <script>
@@ -41,10 +52,10 @@ export default {
                     this.result = this.number1 - this.number2;
                     break;
                 case "multiply":
-                    this.result =  this.number1 / this.number2;
+                    this.result =  this.number1 * this.number2;
                     break;
                 case "divide":
-                    this.result =  this.number1 * this.number2;
+                    this.result =  this.number1 / this.number2;
                     break;
             }
         }
